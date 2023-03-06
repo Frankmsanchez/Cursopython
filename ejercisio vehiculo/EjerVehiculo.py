@@ -6,6 +6,9 @@ class vehiculo:
         self.modelo=modelo
         self.color=color
         
+    def __str__(self):
+        return f"Vehículo {self.marca} {self.modelo} del año {self.color}"
+        
 mi_vehiculo = vehiculo ("toyota","Lancer","Amarillo")
 
 with open('vehiculo.pkl',"wb") as archivo:
