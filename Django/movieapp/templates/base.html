@@ -1,0 +1,18 @@
+<!-- base.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}{% endblock %} - Movie App</title>
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="{% url 'director_list' %}">Directores</a></li>
+      <li><a href="{% url 'pelicula_list' %}">Películas</a></li>
+    </ul>
+  </nav>
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
+``

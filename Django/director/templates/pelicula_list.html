@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Películas</h1>
+  <ul>
+    {% for pelicula in peliculas %}
+      <li><a href="{% url 'pelicula_detail' pelicula.pk %}">{{ pelicula.titulo }}</a> ({{ pelicula.año }})</li>
+    {% empty %}
+      <li>No hay películas disponibles</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

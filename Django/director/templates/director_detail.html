@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>{{ director.nombre }}</h1>
+  <img src="{{ director.foto.url }}" alt="{{ director.nombre }}">
+  <p>{{ director.fecha_nacimiento }} - {{ director.nacionalidad }}</p>
+  <h2>Películas</h2>
+  <ul>
+    {% for pelicula in peliculas %}
+      <li>{{ pelicula.titulo }} ({{ pelicula.año }})</li>
+    {% empty %}
+      <li>No hay películas disponibles</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
